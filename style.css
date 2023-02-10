@@ -1,8 +1,8 @@
 :root {
   /* COLOR PALETTE */
-  --rc-color-n-050: #0c0c0c;
-  --rc-color-n-300: #0c0b0b;
-  --rc-color-n-500: #FFFFFF;
+  --rc-color-n-050: #fffafa;
+  --rc-color-n-300: #c7c5c5;
+  --rc-color-n-500: #792121;
 
   /* BACKGROUND COLOR */
   --rc-color-background: var(--rc-color-n-500);
@@ -13,17 +13,16 @@
   --rc-color-typography-price: var(--rc-color-n-300);
 
   /* TYPOGRAPHY */
-  --rc-typography-typeface: "Opensans", sans-serif;
+  --rc-typography-typeface: "Open Sans", sans-serif;
 
   /* FONT SIZE */
   --rc-typography-h1: 1.9rem;
   --rc-typography-h2: 1.5rem;
   --rc-typography-h3: 1.2rem;
-  --rc-typography-h4: 1rem;
   --rc-typography-p: 0.8rem;
 
   /* LETTER SPACING */
-  --rc-typography-heading-spacing: 0.875rem;
+  --rc-typography-heading-spacing: 0.5rem;
   --rc-typography-content-spacing: 0.2rem;
 
   /* GAP */
@@ -35,6 +34,9 @@
 
   /* BORDER */
   --rc-border: 0.12rem solid var(--rc-color-n-050);
+
+  /* SIZING */
+  --rc-image-height: 18rem;
 }
 
 /* GLOBAL STYLES */
@@ -75,6 +77,10 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: var(--rc-typography-h1);
 }
@@ -83,12 +89,23 @@ h2 {
   font-size: var(--rc-typography-h2);
 }
 
-h4 {
-  font-size: var(--rc-typography-h4)
-}
-
 li {
   list-style-type: none;
+}
+
+.rc-button {
+  border: var(--rc-border);
+  color: var(--rc-color-n-050);
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: transparent;
+  padding: var(--rc-btn-padding);
+  transition: all 0.3s ease-in-out;
+}
+
+.rc-button:hover {
+  background-color: var(--rc-color-n-050);
+  color: var(--rc-color-n-500);
 }
 
 /* LAYOUT */
@@ -126,7 +143,7 @@ li {
   background-color: var(--rc-color-typography-body);
   position: relative;
   top: 5px;
-  transition: all 0.4s ease-in-out;
+  transition: linear all;
 }
 
 .rc-section-header--nav-link:hover::after {
@@ -158,7 +175,7 @@ li {
     display: none;
   }
 
-  /* WHEN CHECKED */
+  /* WHEN CHECKED -> GENERAL SIBLING COMBINATOR */
   .rc-hamburger:checked ~ .rc-section-nav {
     display: block;
     padding: var(--rc-section-padding);
@@ -169,73 +186,76 @@ li {
   }
 }
 
-section {
-  display: block;
+/* HERO */
+.rc-section-hero {
+  height: 40vh;
+  overflow: hidden;
 }
 
-
-
-
-/* header {
-  background-color: white;
+.rc-section-hero--banner {
+  height: 100%;
   width: 100%;
-  position: fixed;
-  top: 0;
-  display: flex;
+  object-fit: cover;
+  animation: zoomBanner 4s;
+}
+
+@keyframes zoomBanner {
+  0% {
+    transform: scale(1.5);
+    filter: blur(14px) brightness(0%) saturate(0%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* FEATURED ITEMS */
+.rc-section-featured {
   flex-direction: column;
-  justify-content: flex-start;
-  z-index: 100;
+  padding: var(--rc-section-padding);
 }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family:'Open Sans', sans-serif;  
+.rc-section-featured__gallery {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 80vw;
 }
 
-header {
-  display: block;
+.rc-section-featured__article {
+  flex-direction: column;
 }
 
-.logo {
-    width: 125px;
-  height: 125px;
+.rc-section-featured--preview {
+  width: auto;
+  height: var(--rc-image-height);
 }
 
-.navbar {
-  display: flex;
-  gap: 4px;
-  justify-content: space-between;
-  align-items: center;
+.rc-section-featured--price {
+  color: var(--rc-color-typography-price);
 }
 
-.li {
-  list-style-type: none;
-}
-.ul {
-  list-style: none;
-}
-
-.item {
-  padding: 10px;
+/* VIDEO */
+.rc-section-video {
+  flex-direction: column;
+  height: 40vh;
+  overflow: hidden;
 }
 
-.header-bar {
-  padding: 10px 0;
-  font-size: 14;
-  max-height: 45px;
+.rc-section-video__description {
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  gap: var(--rc-gap);
+  /* CON Z INDEX COLOCAMOS +1 LA DESCRIPCION POR ENCIMA DEL VIDEO */
+  z-index: 1;
 }
 
-.categories {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px;
-  font-weight: bold;
-  padding: 10px;
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 48rem) {
+  :root {
+    --rc-typography-h1: calc(1.9rem / 1.5);
+  }
 }
-.header-bar span {
-  padding: 10px;
-  margin-right: 10px;
-} */
