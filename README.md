@@ -2,8 +2,8 @@
 
 ## DISEÑO
 
-![Diseño desktop](https://res.cloudinary.com/dfnh5hecu/image/upload/v1675694729/Dayseeker/2023-02-06-15-41-dayseeker.vercel.app_wbynrj.png)
-![Diseño mobile](https://res.cloudinary.com/dfnh5hecu/image/upload/v1675694739/Dayseeker/Captura_de_pantalla_2023-02-06_a_las_15.44.39_bvt9e9.png)
+![Diseño desktop](./assets/videos/desktop.gif)
+![Diseño mobile](./assets/videos/mobile.gif)
 
 ## TODO
 
