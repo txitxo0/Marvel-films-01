@@ -1,7 +1,7 @@
 :root {
   /* COLOR PALETTE */
-  --rc-color-n-050: #fffafa;
-  --rc-color-n-300: #c7c5c5;
+  --rc-color-n-050: #ffff;
+  --rc-color-n-300: #ffff;
   --rc-color-n-500: #792121;
 
   /* BACKGROUND COLOR */
@@ -16,10 +16,10 @@
   --rc-typography-typeface: "Open Sans", sans-serif;
 
   /* FONT SIZE */
-  --rc-typography-h1: 1.9rem;
-  --rc-typography-h2: 1.5rem;
-  --rc-typography-h3: 1.2rem;
-  --rc-typography-p: 0.8rem;
+  --rc-typography-h1: 1.8rem;
+  --rc-typography-h2: 1.2rem;
+  --mv-typography-h3: 1.1rem;
+  --rc-typography-p: 0.9rem;
 
   /* LETTER SPACING */
   --rc-typography-heading-spacing: 0.5rem;
@@ -29,7 +29,7 @@
   --rc-gap: 1.5rem;
 
   /* PADDING */
-  --rc-section-padding: 1.5rem 0;
+  --rc-section-padding: 1.5rem ;
   --rc-btn-padding: 0.5rem 2rem;
 
   /* BORDER */
@@ -195,20 +195,19 @@ li {
 .rc-section-hero--banner {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  animation: zoomBanner 4s;
+  object-fit:scale-down ;
+  animation: zoomBanner 3s;
 }
 
 @keyframes zoomBanner {
   0% {
-    transform: scale(1.5);
-    filter: blur(14px) brightness(0%) saturate(0%);
-    opacity: 0;
+    transform: scale(2);
+    opacity: 10;
   }
 
   100% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 3;
   }
 }
 
@@ -236,21 +235,7 @@ li {
   color: var(--rc-color-typography-price);
 }
 
-/* VIDEO */
-.rc-section-video {
-  flex-direction: column;
-  height: 40vh;
-  overflow: hidden;
-}
 
-.rc-section-video__description {
-  flex-direction: column;
-  position: absolute;
-  text-align: center;
-  gap: var(--rc-gap);
-  /* CON Z INDEX COLOCAMOS +1 LA DESCRIPCION POR ENCIMA DEL VIDEO */
-  z-index: 1;
-}
 
 /* MEDIA QUERIES */
 
