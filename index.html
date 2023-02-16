@@ -20,18 +20,19 @@
     <header class="rc-section-header">
         <div class="rc-layout-container">
             <div class="rc-section-header-layout rc-layout-flex">
-                <a href="index.html" role="link" class="rc-section-header--title">
-                    <img src="./assets/imagenes/Marvel/Marvel_Logo.png" alt="logo" width="300" height="125">
+                <!-- HAMBURGUER -->
+                <a href="./index.html" role="link" class="rc-section-header--title">
+                    <img src="./assets/imagenes/Marvel/Marvel_Logo.png" alt="logo" height="80">
                 </a>
                 <label class="rc-hamburger-label" for="hamburger">&#9733;</label>
                 <input type="checkbox" class="rc-hamburger" id="hamburger"/>
                 <nav role="navigation" class="rc-section-nav">
                     <ul class="rc-layout-flex rc-section-header-nav">
                         <li>
-                            <a href="#" role="link" aria_label="#" class="rc-section-header--nav-link">Películas</a>
+                            <a href="#movies" role="link" aria_label="#" class="rc-section-header--nav-link">Películas</a>
                         </li>
                         <li>
-                            <a href="#" role="link" aria_label="#" class="rc-section-header--nav-link">Series</a>
+                            <a href="#series" role="link" aria_label="#" class="rc-section-header--nav-link">Series</a>
                         </li>
                         <li>
                             <a href="#" role="link" aria_label="#" class="rc-section-header--nav-link">Figuras</a>
@@ -43,99 +44,157 @@
     </header>
     <main>
         <section class="rc-section-hero">
-            <img src="https://vijayvarman.files.wordpress.com/2019/08/9efca-72f99-ant-man-and-the-wasp-banner-ad.jpg" alt="antman-and-the-wasp" class="rc-section-hero--banner">
+            <img src="./assets/imagenes/Marvel/banner.webp" alt="antman-and-the-wasp" loading="lazy" class="rc-section-hero--banner">
         </section>
-        <section class="rc-section-featured rc-layout-flex"> 
-            <h1> Películas más taquilleras de MARVEL</h1>
+        <section class="rc-section-featured rc-layout-flex" id="movies"> 
+            <h1>Películas más taquilleras</h1>
             <div class="rc-section-featured__gallery rc-layout-grid">
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/end-game-2798.jpg" 
                     alt="End-Game" 
                     class="rc-section-featured--preview">
+                    <h3>AVENGERS: END GAME</h3>
+                    <p>2,798M $</p>
                 </article>
-                <h3>AVENGERS: END GAME</h3>
-                <P class="rc-section-featured--preview">Recaucdación 2,798 millones $</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/infity-war-2048.jpg" 
-                    alt="Infity-war" 
+                    alt="End-Game" 
                     class="rc-section-featured--preview">
+                    <h3>AVENGERS: Infity War</h3>
+                    <p>2,052M $</p>
                 </article>
-                <h3>AVENGERS: Infity War</h3>
-                <P class="rc-section-featured--preview">Recaucdación 2,052 millones $</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/spiderman-nwh-1833.jpg" 
-                    alt="Spider-man" 
+                    alt="End-Game" 
                     class="rc-section-featured--preview">
+                    <h3>SPIDER-MAN: NO WAY HOME</h3>
+                    <p>1,916M $</p>
                 </article>
-                <h3>SPIDER-MAN: NO WAY HOME</h3>
-                <P class="rc-section-featured--preview">Recaucdación 1,916 millones $</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/ironman3-1215.jpg" 
-                    alt="Ironman" 
+                    alt="End-Game" 
                     class="rc-section-featured--preview">
+                    <h3>IRON-MAN 3</h3>
+                    <p>1,215M $</p>
                 </article>
-                <h3>IRON-MAN 3</h3>
-                <P class="rc-section-featured--preview">Recaucdación 1,215 millones $</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/blackpanther-1336.jpg" 
-                    alt="Black-panther" 
+                    alt="End-Game" 
                     class="rc-section-featured--preview">
+                    <h3>BLACK PANTHER</h3>
+                    <P>1,336M $</p>
                 </article>
-                <h3>BLACK PANTHER</h3>
-                <P class="rc-section-featured--preview">Recaucdación 1,336 millones $</P>
+                <article class="rc-section-featured__article rc-layout-flex">
+                    <img 
+                    src="./assets/imagenes/Marvel/end-game-2798.jpg" 
+                    alt="End-Game" 
+                    class="rc-section-featured--preview">
+                    <h3>AVENGERS: END GAME</h3>
+                    <p>2,798M $</p>
+                </article>
+                <article class="rc-section-featured__article rc-layout-flex">
+                    <img 
+                    src="./assets/imagenes/Marvel/infity-war-2048.jpg" 
+                    alt="End-Game" 
+                    class="rc-section-featured--preview">
+                    <h3>AVENGERS: Infity War</h3>
+                    <p>2,052M $</p>
+                </article>
+                <article class="rc-section-featured__article rc-layout-flex">
+                    <img 
+                    src="./assets/imagenes/Marvel/spiderman-nwh-1833.jpg" 
+                    alt="End-Game" 
+                    class="rc-section-featured--preview">
+                    <h3>SPIDER-MAN: NO WAY HOME</h3>
+                    <p>1,916M $</p>
+                </article>
             </div>
         </section>
-        <section class="rc-section-featured rc-layout-flex"> 
-            <h1>Series mas vista de MARVEL</h1>
+        <section class="rc-section-featured rc-layout-flex" id="series"> 
+            <h1>Series más vistas</h1>
             <div class="rc-section-featured__gallery rc-layout-grid">
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/loki.jpg" 
                     alt="loki"
                      class="rc-section-featured--preview">
+                    <h3>LOKI</h3>
+                    <p>17M reproducciones</p>
                 </article>
-                <h3>LOKI</h3>
-                <P class="rc-section-featured--preview">Vista por más de 17 millones de personas</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img
                      src="./assets/imagenes/Marvel/wanda.jpg"
                       alt="Wanda-vision" 
                       class="rc-section-featured--preview">
+                    <h3>WANDA-VISION</h3>
+                    <p>13M reproducciones</p>
                 </article>
-                <h3>WANDA-VISION</h3>
-                <P class="rc-section-featured--preview">Vista por más de 13 millones de personas</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/caballero-luna.jpg" 
                     alt="Moon-knight" 
                     class="rc-section-featured--preview">
+                    <h3>MOON-KNIGHT</h3>
+                    <p>17M reproducciones</p>
                 </article>
-                <h3>MOON-KNIGHT</h3>
-                <P class="rc-section-featured--preview">Vista por más de 17 millones de personas</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img
                      src="./assets/imagenes/Marvel/falcon-winter.jpg" 
                      alt="Falcon-winter-soldier" 
                      class="rc-section-featured--preview">
+                     <h3>FALCON AND THE WINTER SOLDIER</h3>
+                     <p>12M reproducciones</p>
                 </article>
-                <h3>FALCON AND THE WINTER SOLDIER</h3>
-                <P class="rc-section-featured--preview">Vista por más de 12 millones de personas</P>
-                <article class="rc-section-featured__gallery rc-layout-flex">
+                <article class="rc-section-featured__article rc-layout-flex">
                     <img 
                     src="./assets/imagenes/Marvel/ojodehalcon.jpg" 
                     alt="Ojo-de-halcón" 
                     class="rc-section-featured--preview">
+                    <h3>HAKEYE</h3>
+                    <p>11M reproducciones</p>
                 </article>
-                <h3>HAKEYE</h3>
-                <P class="rc-section-featured--preview">Vista por más de 11 millones de personas</P>
+                <article class="rc-section-featured__article rc-layout-flex">
+                    <img 
+                    src="./assets/imagenes/Marvel/loki.jpg" 
+                    alt="loki"
+                     class="rc-section-featured--preview">
+                
+                    <h3>LOKI</h3>
+                    <p>17M reproducciones</p>
+                </article>
+                <article class="rc-section-featured__article rc-layout-flex">
+                    <img
+                     src="./assets/imagenes/Marvel/wanda.jpg"
+                      alt="Wanda-vision" 
+                      class="rc-section-featured--preview">
+                    <h3>WANDA-VISION</h3>
+                    <p>13M reproducciones</p>
+                </article>
+                <article class="rc-section-featured__article rc-layout-flex">
+                    <img 
+                    src="./assets/imagenes/Marvel/caballero-luna.jpg" 
+                    alt="Moon-knight" 
+                    class="rc-section-featured--preview">
+                    <h3>MOON-KNIGHT</h3>
+                    <p>17M reproducciones</p>
+                </article>
             </div>
         </section>
+        <!--  VIDEO -->
+        <section class="rc-section-video rc-layout-flex">
+            <div class="rc-section-video__description rc-layout-flex">
+                <h2>Wakanda forever!</h2>
+                <button class="rc-button">Dale un vistazo</button>
+            </div>
+            <video autoplay muted class="rc-section-video-media">
+                <source src="./assets/videos/intro.mp4" type="video/mp4" />
+            </video>
+        </section>
     </main>
-   
 </body>
 </html>

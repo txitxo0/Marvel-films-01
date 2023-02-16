@@ -30,6 +30,7 @@
 
   /* PADDING */
   --rc-section-padding: 1.5rem ;
+  --rc-img-padding: 1rem ;
   --rc-btn-padding: 0.5rem 2rem;
 
   /* BORDER */
@@ -195,7 +196,7 @@ li {
 .rc-section-hero--banner {
   height: 100%;
   width: 100%;
-  object-fit:scale-down ;
+  object-fit: cover ;
   animation: zoomBanner 3s;
 }
 
@@ -229,12 +230,28 @@ li {
 .rc-section-featured--preview {
   width: auto;
   height: var(--rc-image-height);
+  padding: var(--rc-img-padding) 0 var(--rc-img-padding) 0;
 }
 
 .rc-section-featured--price {
   color: var(--rc-color-typography-price);
 }
 
+/* VIDEO */
+.rc-section-video {
+  flex-direction: column;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.rc-section-video__description {
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  gap: var(--rc-gap);
+  /* CON Z INDEX COLOCAMOS +1 LA DESCRIPCION POR ENCIMA DEL VIDEO */
+  z-index: 1;
+}
 
 
 /* MEDIA QUERIES */
